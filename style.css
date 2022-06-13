@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 41%, 83%);
+}
+
+.icon{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    padding: 0;
+    border: none;
+    text-align: end;
+    font-size: 24px;
+    border: 2px solid hsl(172, 61%, 76%);
+}
+
+#input-custom{
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+}
+
+.container{
+    background-color: white;
+    width: 60%;
+    height: auto;
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+}
+
+.container .part-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    height: auto;
+    /*background-color: red;*/
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.container .part-left .top,
+.container .part-left .middle,
+.container .part-left .bottom{
+    width: 100%;
+}
+
+.price-bar{
+    display: flex;
+    width: 100%;
+}
+
+.price-bar .icon-dollar{
+    width: 10%;
+}
+
+.number-person, .price{
+    width: 90%;
+}
+
+.number-person input, .price input{
+    width: 100%;
+    height: 30px;
+    /*background-color: yellow;*/
+}
+
+
+.part-left .select-percentage{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 10px;
+}
+
+.percentage, .button-custom{
+    min-width: 100%;
+}
+
+.part-left .select-percentage button{
+    width: 100%;
+    height: 35px;
+    background-color: hsl(180, 100%, 14%);
+    color: white;
+    cursor: pointer;
+    border: none;
+
+}
+.part-left .select-percentage button:hover{
+    background-color: hsl(172, 61%, 76%);
+    color: black;
+}
+
+.part-left .select-percentage .active-btn{
+    background-color: hsl(171, 67%, 45%);
+}
+
+.part-left .select-percentage input{
+    width: 100%;
+}
+
+.container .part-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    background-color: hsl(180, 100%, 14%);
+    padding: 20px;
+}
+
+.part-right .top .container-amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.part-right .top .container-total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.part-right .amount{
+    font-size: 40px;
+    color: hsl(172, 65%, 45%);
+}
+
+.part-right .bottom{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.part-right .bottom button{
+    width: 50%;
+    border: none;
+    background-color: hsl(172, 61%, 76%);
+    cursor: pointer;
+}
+
+.part-right .bottom button:hover{
+    background-color: hsl(171, 67%, 45%);
+}
+
+
+@media screen and (max-width:1050px) {
+    .container{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .container{
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width:450px) {
+    .container{
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .part-left .select-percentage{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .part-right .amount{
+        font-size: 25px;
+    }
+
+    .part-right .title-amount,
+    .part-right .title-total{
+        font-size: 15px;
+    }
+}
